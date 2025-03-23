@@ -1,0 +1,18 @@
+.right--side--dropdown{
+    margin-top: 15px;
+}
+.right--side--dropdown>button{
+    border: solid 0.5px black;
+    border-radius: 15px;
+    background-color: white;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 6px 15px;
+}
+.right--side--dropdown>button:hover{
+    transition: 0.3s;
+    background-color: #e7e5e5;
+}
+.right--side--dropdown--menu>li{
+    margin-bottom: 10px;
+}

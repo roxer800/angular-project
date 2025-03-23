@@ -1,0 +1,35 @@
+
+<div class="card--section">
+    @for (item of hotels; track item.name) {
+        <div class="hotel-div card mb-3" data-id="${cardProduct.id}">
+                <div class="row g-0">
+                    <div class="col-md-4 col-sm-3 col-3">
+                        <img src={{item.featuredImage}} class="img-fluid img--fluid" alt="...">
+                    </div>
+                    <div class="col-md-6 col-sm-7 col-7 card--body">
+                        <div class="card-body">
+                            <h5 class="card-title card--title">{{item.name}}</h5>
+                            <div class="location">
+                                <p class="location--place">{{item.address}} Show on map</p>
+                                <p>{{item.city}}</p>
+                            </div>
+                            <p class="card-text card--text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque consequuntur officiis repellat iusto accusantium itaque maiores maxime, laborum esse totam.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-2">
+                        <div class="card--right--side">
+                            <div>
+                                <p class="rating--word">4.8</p>
+                                <p class="review">23 reviews</p>
+                            </div>
+                            <div class="rating--number">
+                                <p>4.8</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary prices--button" (click)="navigateToHotelInfo(item.id)">Show prices</button>
+                        
+                    </div>
+                </div>
+            </div>
+      }
+</div>

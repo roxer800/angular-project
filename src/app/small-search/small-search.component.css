@@ -1,0 +1,156 @@
+.mobile--left--side{
+    width: 110%;
+    margin-left: -25px;
+    height: 100px;
+    background-color:#ffb700;
+    display: none;
+    
+}
+.search-input{
+    border: solid 0.25px rgb(196, 194, 194);
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+}
+.search-input>input{
+    background-image: url('../../../public/images/magnifying-glass-solid.svg');
+    background-size: 20px 20px; 
+    background-repeat: no-repeat;
+    background-position: 10px;
+    padding-left: 40px; 
+    width: 100%;
+    height: 61%;
+    border: none;
+    outline: none;
+}
+.select--dates{
+    width: 100%;
+    height: 40%;
+    text-align: left;
+    background-color: #e0dfdf;
+    padding-top: 7px;
+    padding-left: 7px;
+}
+.select--dates>a{
+    text-decoration: none;
+}
+
+@media(max-width:1155px){
+    .card--body{
+        margin: auto;
+    }
+    .prices--button{
+        font-size: 14px;
+    }
+}
+@media(max-width:1020px){
+    .right--side>h2{
+        font-size: 24px;
+    }
+    .left--section{
+        font-size: 20px;
+    }
+    .right--section{
+        display: none;
+    }
+    .right--section--toggle{
+        display: block;
+    }
+    .speciality{
+        margin-top: -15px;
+    }
+}
+
+@media(max-width:980px){
+    .right--side>h2{
+        margin-top: 15px;
+        font-size: 20px;
+    }
+    .card{
+        height: 150px;
+    }
+    .img--fluid{
+        height: 150px;
+        width: 150px;
+    }
+    .card--body{
+        margin-left: -45px;
+        margin-right: 25px;
+    }
+    .card--title{
+        font-size: 15px;
+    }
+    .location{
+        display: flex;
+        font-size: 9px;
+        margin-bottom: -10px;
+    }
+    .speciality{
+        font-size: 9px;
+    }
+    .card--text{
+        font-size: 9px;
+    }
+    .rating--word{
+        font-size: 9px;
+    }
+    .review{
+        font-size: 8px;
+    }
+    .rating--number{
+        max-height: 23px;
+        font-size: 9px;
+        border-radius: 5px;
+    }
+    .prices--button{
+        font-size: 9px;
+        max-height: 40px;
+    }
+}
+
+@media(max-width:865px){
+    .card--body{
+        margin: auto;
+    }
+    .card--title{
+        font-size: 12px;
+    }
+}
+
+@media(max-width:815px){
+    .first--check--question{
+        margin-left: 6px;
+    }
+    .second--check--question{
+        margin-left: 45px;
+    }
+}
+@media(max-width:768px){
+    .disable{
+        display: none;
+    }
+    .dropdown--button{
+        display: block;
+    }
+    .options, .map, .form{
+        display: none;
+    }
+    .mobile--left--side{
+        display: block;
+    }
+
+}
+@media(max-width:610px){
+    .form--label{
+        font-size: 11px;
+    }
+    .first--check--question{
+        margin-left: 0px;
+    }
+    .second--check--question{
+        margin-left: 35px;
+    }
+}

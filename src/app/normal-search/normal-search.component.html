@@ -1,0 +1,101 @@
+<form class="form">
+    <h5>Search</h5>
+  
+    <p class="destination--p">Destination/property Name:</p>
+    <input class="search--input" type="text" placeholder="search city">
+
+    <p class="destination--p">Check-in date</p>
+    <input type="date" class="check" [(ngModel)]="checkInDate" [ngModelOptions]="{standalone: true}">
+    
+    <p class="destination--p">Check-out date</p>
+    <input type="date" class="check" [(ngModel)]="checkOutDate" [ngModelOptions]="{standalone: true}">
+  
+    <p class="destination--p">1-night stay</p>
+  
+    <!-- Dropdown -->
+    <div class="dropdown">
+      <div class="dropdown-toggle form--dropdown" (click)="toggleDropdown()">
+        {{ updateDropdownText() }}
+      </div>
+      
+      <div class="dropdown-menu-form" [ngStyle]="{ 'display': dropdownOpen ? 'block' : 'none' }">
+        <div class="dropdown--wrapper">
+          
+          <!-- Adults -->
+          <div class="dropdown-div">
+            <p>Adults</p>
+            <div class="dropdown-buttons">
+              <button type="button" class="minus--button" (click)="decrement('adults')">-</button>
+              <p class="adults--count">{{ adultsCount }}</p>
+              <button type="button" class="plus--button" (click)="increment('adults')">+</button>
+            </div>
+          </div>
+  
+          <!-- Children -->
+          <div class="dropdown-div">
+            <p>Children</p>
+            <div class="dropdown-buttons">
+              <button type="button" class="minus--button" (click)="decrement('children')">-</button>
+              <p class="children--count">{{ childrenCount }}</p>
+              <button type="button" class="plus--button" (click)="increment('children')">+</button>
+            </div>
+          </div>
+  
+          <!-- Rooms -->
+          <div class="dropdown-div">
+            <p>Rooms</p>
+            <div class="dropdown-buttons">
+              <button type="button" class="minus--button" (click)="decrement('rooms')">-</button>
+              <p class="rooms--count">{{ roomsCount }}</p>
+              <button type="button" class="plus--button" (click)="increment('rooms')">+</button>
+            </div>
+          </div>
+  
+          <button class="dropdown--submit">Done</button>
+        </div>
+      </div>
+    </div>
+    <mat-slider 
+    class="range-slider"
+    [min]="minValue" 
+    [max]="maxValue" 
+    [step]="step"
+    [displayWith]="formatLabel"
+    (input)="updateValues($event)">
+    <input matSliderStartThumb [(ngModel)]="startValue" [ngModelOptions]="{standalone: true}">
+    <input matSliderEndThumb [(ngModel)]="endValue" [ngModelOptions]="{standalone: true}">
+    </mat-slider>
+
+  <div class="slider-values">
+    <span class="start-value">{{ startValue ? startValue : 0}}</span>
+    -
+    <span class="end-value">{{ endValue ? endValue : maxValue  }}</span>
+  </div>
+  
+    <!-- Tooltip Section -->
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="flexCheckDefault">
+      <label class="form-check-label form--label" for="flexCheckDefault">Entire homes & apartments</label>
+      <i class="fa-solid fa-question fa-md first--check--question"
+         (mouseover)="toggleTooltip('first', true)"
+         (mouseout)="toggleTooltip('first', false)">
+      </i>
+      <p *ngIf="firstCheckTooltipVisible" class="tooltip-text">
+        We'll show you stays where you can have the entire place to yourself.
+      </p>
+    </div>
+    
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="flexCheckWork">
+      <label class="form-check-label form--label" for="flexCheckWork">I'm traveling for work</label>
+      <i class="fa-solid fa-question fa-md second--check--question"
+         (mouseover)="toggleTooltip('second', true)"
+         (mouseout)="toggleTooltip('second', false)">
+      </i>
+      <p *ngIf="secondCheckTooltipVisible" class="tooltip-text">
+        If you select this option, we'll show you popular business travel features like breakfast, WiFi, and free parking.
+      </p>
+    </div>
+    <button class="form-search btn btn-primary">Search</button>
+  </form>
+  

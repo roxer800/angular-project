@@ -1,0 +1,64 @@
+<div class="container my-5">
+    <div class="row hotelinfolarge">
+
+            <div class="col-12">
+                <!-- Fixed Main Image -->
+                <img class="mainImage img-fluid mb-3" id="mainImage"
+                    src={{hotelInfo.featuredImage}}
+                    alt={{hotelInfo.name}} 
+                    data-bs-toggle="modal"
+                    data-bs-target="#allPicturesModal">
+            </div>
+    </div>
+    <div class="row py-4">
+        <!-- Left Column: Hotel Details and Other Content -->
+        <div class="col-lg-6 col-md-6 col-sm-12 left-content">
+            <div class="hotel-name">
+                    <h2>{{hotelInfo.name}}</h2>
+                    <p class="card-text card--text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque consequuntur officiis repellat iusto accusantium itaque maiores maxime, laborum esse totam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque consequuntur officiis repellat iusto accusantium itaque maiores maxime, laborum esse totam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque consequuntur officiis repellat iusto accusantium itaque maiores maxime, laborum esse totam.</p>
+            </div>
+            <hr class="smallhr">
+            <div class="mt-5">
+                <h2>Available for Rent</h2>
+                <div class="room-content row">
+                    @for (room of hotelInfo.rooms; track room.name) {
+                        <div class="room-item col-6 col-md-12">
+                            <img class="mainImage img-fluid mb-3" id="mainImage"
+                            src={{room.images[0].source}}
+                            alt={{room.name}} >
+                            <h4>{{room.name}}</h4>
+                            <div>
+                            <p class="room-price"> ₾ {{room.pricePerNight}} / Night</p>
+                            </div>
+                            <button class="book-btn" (click)="navigateToRoom(room.id)">See Details</button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <!-- Right Column: Fixed Booking Section -->
+        <div class="col-lg-6 col-md-6">
+            <div class="search-wrapper">
+                <div class="search-inner-wrapper">
+                    <div class="check-in-div">
+                        <div class="mt-3">
+                            <p class="check-in-text">check-out from:</p>
+                            <p>21/01/25</p>
+                        </div>
+                        <div class="vl"></div>
+                        <div class="mt-3">
+                            <p class="check-in-text">check-in from:</p>
+                            <p>22/01/25</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="guest-wrapper">
+                        <p>1 Adults, 0 Children</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+                <button class="search">Search</button>
+            </div>
+        </div>
+    </div>
+</div>

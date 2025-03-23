@@ -1,0 +1,17 @@
+<div class="booking-details-container">
+    <div class="booking-details">
+        @for (booking of bookingDetails; track booking.name) {
+            <div class="p-4 details-wrapper gap-4" data-booking-id="${booking.bookingId}">
+                <div class="details-header">
+                    <h2 class="booking-title">Booking Details</h2>
+                    <button (click)="deleteBooking(booking.id)" class="remove-btn" data-id="{{booking.bookingId}}">X</button>
+                </div>
+                <h4 class="booking-item">Check-in Date: <span class="booking-value">{{booking.checkInDate}}</span></h4>
+                <h4 class="booking-item">Check-out Date: <span class="booking-value">{{booking.checkOutDate}}</span></h4>
+                <h4 class="booking-item">Customer Name: <span class="booking-value">{{booking.customerName}}</span></h4>
+                <h4 class="booking-item">Customer Phone: <span class="booking-value">{{booking.customerPhone}}</span></h4>
+                <h4 class="booking-item total-price">Total Price: <span class="booking-value">${{booking.totalPrice}}</span></h4>
+            </div>
+        }
+    </div>
+</div> 

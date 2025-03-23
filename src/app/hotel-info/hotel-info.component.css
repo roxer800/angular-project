@@ -1,0 +1,84 @@
+body{
+    height: 2000px;
+}
+.search-wrapper{
+    width: 85%;
+    height: 260px;
+    border: solid 1px transparent;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: transparent;
+    text-align: center;
+    padding-bottom: 25px;
+}
+.search-inner-wrapper{
+    height: 170px;
+    width: 80%;
+    border: solid 1px grey;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 15px;
+}
+.check-in-div{
+    display: flex;
+    justify-content: space-around;
+
+}
+.vl {
+    margin-top: 30px;
+    border-left: 1px solid grey;
+    height: 40px;
+}
+.guest-wrapper{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.guest-wrapper > p{
+    margin: 0;
+}
+.check-in-text{
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
+.search{
+    margin-top: 15px;
+    border: none;
+    padding: 10px 100px 10px 100px;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+}
+.room-item{
+    margin-top: 60px;
+    width: 280px;
+}
+.mainImage{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+.room-price{
+    font-weight: bold;
+    font-size: 16px;
+}
+.book-btn{
+    width: 90%;
+    text-align: center;
+    background-color: transparent;
+    border: solid 0.5px grey;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 8px;
+}
+.book-btn:hover{
+    transition: 2s ease;
+    border: none;
+}
+
+@media(max-width:1200px){
+    .room-item{
+        width: 600px;
+    }
+}

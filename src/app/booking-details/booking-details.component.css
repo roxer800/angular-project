@@ -1,0 +1,66 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Booking Details Styles */
+.booking-details-container {
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin: 20px auto;
+    color: #333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.booking-details{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+}
+.details-wrapper{
+    background-color: beige;
+    border-radius: 8px;
+}
+.details-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.booking-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #4caf50;
+    text-align: center;
+    font-weight: bold;
+}
+.remove-btn{
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 35px;
+}
+
+.booking-item {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.booking-value {
+    font-weight: bold;
+    color: #555;
+}
+
+.total-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #e91e63;
+}

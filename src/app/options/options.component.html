@@ -1,0 +1,126 @@
+<div class="options container">
+    <h5>Filter by:</h5>
+    <hr>
+    <h6>Your Previous Filters</h6>
+    <div class="form-check d-flex justify-content-between font--size">
+        <div>
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                Wheelchair accessible
+            </label>
+        </div>
+        <label for="flexCheckDefault">&nbsp; &nbsp; &nbsp; 155</label>
+    </div>
+    <hr>
+
+    <h6>Popular Filters</h6>
+    <div class="first--section">
+        @for (item of firstSection; track item.name) {
+            <div class="form-check d-flex justify-content-between">
+              <div>
+                <input class="form-check-input" type="checkbox" id="checkbox_{{ item.name }}">
+                <label class="form-check-label" for="checkbox_{{ item.name }}">{{ item.name }}</label>
+              </div>
+              <label>{{ item.count }}</label>
+            </div>
+          }
+    </div>
+    <hr>
+
+    <h6>Facilities</h6>
+    <div class="second--section">
+        @for (item of secondSection; track item.name) {
+            <div class="form-check d-flex justify-content-between">
+              <div>
+                <input class="form-check-input" type="checkbox" id="checkbox_{{ item.name }}">
+                <label class="form-check-label" for="checkbox_{{ item.name }}">{{ item.name }}</label>
+              </div>
+              <label>{{ item.count }}</label>
+            </div>
+          }
+    </div>
+    <hr>
+
+    <h6>Property Type</h6>
+    <div class="third--section">
+        @for (item of thirdSection; track item.name) {
+            <div class="form-check d-flex justify-content-between">
+              <div>
+                <input class="form-check-input" type="checkbox" id="checkbox_{{ item.name }}">
+                <label class="form-check-label" for="checkbox_{{ item.name }}">{{ item.name }}</label>
+              </div>
+              <label>{{ item.count }}</label>
+            </div>
+          }
+    </div>
+    <hr>
+
+    <h6>Property Rating</h6>
+    <div class="fourth--section">
+        @for (item of fourthSection; track item.name) {
+            <div class="form-check d-flex justify-content-between">
+              <div>
+                <input class="form-check-input" type="checkbox" id="checkbox_{{ item.name }}">
+                <label class="form-check-label" for="checkbox_{{ item.name }}">{{ item.name }}</label>
+              </div>
+              <label>{{ item.count }}</label>
+            </div>
+          }
+    </div>
+    <hr>
+
+    <h6>Review Score</h6>
+    <div class="fifth--section">
+        <@for (item of fifthSection; track item.name) {
+            <div class="form-check d-flex justify-content-between">
+              <div>
+                <input class="form-check-input" type="checkbox" id="checkbox_{{ item.name }}">
+                <label class="form-check-label" for="checkbox_{{ item.name }}">{{ item.name }}</label>
+              </div>
+              <label>{{ item.count }}</label>
+            </div>
+          }
+    </div>
+    <hr>
+
+    <h6>Distance from Center of Batumi</h6>
+    <div class="sixth--section">
+        @for (item of sixthSection; track item.name) {
+            <div class="form-check d-flex justify-content-between">
+              <div>
+                <input class="form-check-input" type="checkbox" id="checkbox_{{ item.name }}">
+                <label class="form-check-label" for="checkbox_{{ item.name }}">{{ item.name }}</label>
+              </div>
+              <label>{{ item.count }}</label>
+            </div>
+          }
+    </div>
+    <hr>
+
+    <h6>Fun Things To Do</h6>
+    <div class="seventh--section">
+        @for (item of seventhSection; track item.name) {
+            <div class="form-check d-flex justify-content-between">
+              <div>
+                <input class="form-check-input" type="checkbox" id="checkbox_{{ item.name }}">
+                <label class="form-check-label" for="checkbox_{{ item.name }}">{{ item.name }}</label>
+              </div>
+              <label>{{ item.count }}</label>
+            </div>
+          }
+    </div>
+    <hr>
+
+    <h6>Brands</h6>
+    <div class="eighth--section">
+        @for (item of eighthSection; track item.name) {
+            <div class="form-check d-flex justify-content-between">
+              <div>
+                <input class="form-check-input" type="checkbox" id="checkbox_{{ item.name }}">
+                <label class="form-check-label" for="checkbox_{{ item.name }}">{{ item.name }}</label>
+              </div>
+              <label>{{ item.count }}</label>
+            </div>
+          }
+    </div>
+</div>

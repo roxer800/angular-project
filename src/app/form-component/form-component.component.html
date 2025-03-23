@@ -1,0 +1,42 @@
+<div class="container mt-4 mb-4">
+    <h3>Payment</h3>
+    <div class="hotel-details">
+        <h2>{{roomInfo.name}}</h2>
+        <h4>₾{{roomInfo.pricePerNight}} / night</h4>
+    </div>
+    <form id="bookingForm" [formGroup]="formInfo" (ngSubmit)="addReservation()">
+        <label for="name">Name</label>
+        <input type="text"  formControlName="customerName" name="name" placeholder="Enter your name" required>
+  
+        <label for="email">Email</label>
+        <input type="email"  formControlName="email" name="email" placeholder="Enter your email" required>
+  
+        <label for="phone">Phone</label>
+        <input type="tel"  formControlName="customerPhone" name="phone" placeholder="Enter your phone number" required>
+  
+        <label for="checkin">Check-In Date</label>
+        <input type="date"  formControlName="checkIn" name="checkIn" required>
+  
+        <label for="checkout">Check-Out Date</label>
+        <input type="date"  formControlName="checkOut" name="checkout" required>
+        <input type="hidden"  formControlName="totalPrice" name="checkout" value="{{roomInfo.pricePerNight}}">
+
+        <h5 class="mb-5">Payment details</h5>
+        <div class="payment-wrapper mb-5">
+                <div class="d-flex room-price p-2">
+                    <div class='d-flex'>
+                        <p class="m-0">Room Price</p>
+                        <p class="m-0 smaller">(1 Night)</p>
+                    </div>
+                    <p class='m-0'>₾{{roomInfo.pricePerNight}}</p>
+                </div>
+                <hr>
+                <div class=" d-flex total p-2">
+                    <h5 class="m-0">Total:</h5>
+                    <p class='m-0'>₾{{roomInfo.pricePerNight}}</p>
+                </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+

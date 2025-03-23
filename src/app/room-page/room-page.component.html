@@ -1,0 +1,82 @@
+<div class="container mt-5 room-info ">
+    <div class="row">
+        <div class="col-6">
+            <!-- Fixed Main Image -->
+            <img class="mainImage img-fluid mb-3" id="mainImage"
+                src={{roomInfo.images[0].source}}
+                alt={{roomInfo.name}}
+                data-bs-toggle="modal"
+                data-bs-target="#allPicturesModal">
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <img class="col-6 mainImage img-fluid mb-3 test" id="mainImage"
+                    src={{roomInfo.images[1].source}}
+                    alt={{roomInfo.name}} 
+                    data-bs-toggle="modal"
+                    data-bs-target="#allPicturesModal">
+                <img class="col-6 mainImage img-fluid mb-3 test" id="mainImage"
+                    src={{roomInfo.images[2].source}}
+                    alt={{roomInfo.name}} 
+                    data-bs-toggle="modal"
+                    data-bs-target="#allPicturesModal">
+                <img class="col-6 mainImage img-fluid mb-3 test" id="mainImage"
+                    src={{roomInfo.images[3].source}}
+                    alt={{roomInfo.name}} 
+                    data-bs-toggle="modal"
+                    data-bs-target="#allPicturesModal">
+                <img class="col-6 mainImage img-fluid mb-3 test" id="mainImage"
+                    src={{roomInfo.images[4].source}}
+                    alt={{roomInfo.name}} 
+                    data-bs-toggle="modal"
+                    data-bs-target="#allPicturesModal">
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container my-5">
+        <div class="row py-4">
+            <!-- Left Column: Hotel Details and Other Content -->
+            <div class="col-lg-6 col-md-6 col-sm-12 left-content">
+                <div class="hotel-name"></div>
+                <hr class="smallhr">
+                <div class="mt-5">
+                    <h3>Available for Rent:</h3>
+                    <div class="room-content row">
+                        <div class="d-flex gap-2">
+                            <p class="room-name">{{roomInfo.name}}</p>
+                            <p class="mt-3">(maximum guests: {{roomInfo.maximumGuests}})</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Column: Fixed Booking Section -->
+            <div class="col-lg-6 col-md-6">
+                <div class="room-search-wrapper">
+                    <div class="room-price">
+                        <p class="room-price-p">₾ {{roomInfo.pricePerNight}}</p>
+                    </div>
+                    <div class="search-inner-wrapper">
+                        <div class="check-in-div">
+                            <div class="mt-3">
+                                <p class="check-in-text">check-out from:</p>
+                                <p>21/01/25</p>
+                            </div>
+                            <div class="vl"></div>
+                            <div class="mt-3">
+                                <p class="check-in-text">check-in from:</p>
+                                <p>22/01/25</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="guest-wrapper">
+                            <p>1 Adults, 0 Children</p>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <button (click)="navigateToForm(roomInfo.id)" class="search reserve">Reserve Now</button>
+                    <p class="disclaimer">Price shown is the total trip price, including additional fees and taxes.</p>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,42 @@
+.dropdown-menu-form {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+}
+.form-check{
+    position: relative !important;
+}
+
+.tooltip-text {
+  position: absolute;
+ right: 15px;
+  top: 20px;
+  color: white;
+  font-size: 11px;
+  background-color: rgb(0, 0, 0);
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 5px;
+  height: 60px;
+  width: 170px;
+  z-index: 100;
+}
+.range-slider{
+  width: 90%;
+}
+.slider-values{
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin-bottom: 15px;
+}
+.start-value, .end-value{
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 9px;
+}
