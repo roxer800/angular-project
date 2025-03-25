@@ -23,7 +23,7 @@ export class FormComponentComponent {
       totalPrice: new FormControl(null),
       isConfirmed: new FormControl(true),
       customerName: new FormControl(""),
-      customerId: new FormControl("77777"),
+      customerId: new FormControl("55555"),
       customerPhone: new FormControl(""),
     });
   }
@@ -67,7 +67,7 @@ export class FormComponentComponent {
     ).subscribe({
       next: (data: any) => {
         console.log('Reservation Successful', data);
-        this.router.navigate(['/bookingDetails']); 
+        this.router.navigate(['bookingDetails']); 
       },
       error: (err) => {
         console.error('Error Occurred:', err);
