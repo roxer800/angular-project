@@ -24,7 +24,7 @@ export class FormComponentComponent {
       totalPrice: new FormControl(null),
       isConfirmed: new FormControl(true),
       customerName: new FormControl(""),
-      customerId: new FormControl("666666"),
+      customerId: new FormControl("77777"),
       customerPhone: new FormControl(""),
     });
   }

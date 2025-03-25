@@ -23,7 +23,7 @@ export class BookingDetailsComponent {
           return of([]); 
         })
       ).subscribe((data: any) => {
-        this.bookingDetails = data.filter((booking: any) => booking.customerId === "666666");
+        this.bookingDetails = data.filter((booking: any) => booking.customerId === "77777");
       });
     }
     deleteBooking(id: string) {
