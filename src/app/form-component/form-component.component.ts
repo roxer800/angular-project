@@ -16,7 +16,6 @@ export class FormComponentComponent {
   public formInfo: FormGroup;
 
   constructor(private apiService: ApiService, public router: Router, private route: ActivatedRoute) {
-    // Initialize the form group
     this.formInfo = new FormGroup({
       roomID: new FormControl(null),
       checkIn: new FormControl(""),
@@ -68,6 +67,7 @@ export class FormComponentComponent {
     ).subscribe({
       next: (data: any) => {
         console.log('Reservation Successful', data);
+        this.router.navigate(['/bookingDetails']); 
       },
       error: (err) => {
         console.error('Error Occurred:', err);
